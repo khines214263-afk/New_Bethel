@@ -1,20 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 html, body {
     margin: 0;
     padding: 0;
 }
 body {
     margin: 0;
-   
+    padding-top: 80px;
 }
-.hero {
-    text-align: center;
+.wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+header {
     padding: 20px;
-    height: 100vh;
-    background-image: url("img/church.jpg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+}
+.main_page {
+    text-align: center; 
+    position: relative; 
+}
+.main_page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/NBMBC.jpg);
+    background-repeat: repeat;
+    background-size: 100px;
+    opacity: 0.2;
+    z-index: -1;
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
 }
 .hero img {
     width: 100%;
@@ -24,6 +50,22 @@ body {
 .hero h1 {
     margin: 15px 0 5px 0;
 }
+.hero a {
+    color:rgba(255, 217, 0, 0.952);
+    text-decoration: underline;
+}
+.hero a:visited {
+    color: black;
+}
+.hero a:hover {
+    color: lightgray
+}
+.pastor {
+    margin-top: 120px;
+}
+.nbbc {
+    font-size: 50px;
+}
 .bio-btn {
     display: inline-block;
     margin-top: 15px;
@@ -32,4 +74,126 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+}
+.home-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    text-decoration: underline;
+    border-radius: 5px;  
+}
+.bio_page {
+    min-height: 100vh;
+    max-width: 100vw;
+    background-color: #800000;
+    color: rgba(255, 217, 0, 0.952);
+}
+.bio_container {
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+.bio_container img {
+    width: 250px;
+    margin: 25px 0;
+}
+.home_btn_container {
+    width: 100%;
+    padding: 20px;
+    text-align: right;
+}
+.bio {
+    font-size: 50px;
+    align-items: center;
+    margin-bottom: 20px;
+    text-decoration: wavy;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgba(255, 217, 0, 0.952);  
+}
+.bio_bio {
+    line-height: 1.6;
+    
+}
+.members_page {
+    background-color: aqua;
+}
+.prayers_page {
+    background-color: lightpink;
+}
+.headline {
+    font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding-bottom: 250px;
+    text-align: center;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    gap: 20px;
+}
+.grid img {
+    display: block;
+    width: 150px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+.card img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: normal;
+    flex-direction: row;
+    padding: 45px;
+    position: fixed;
+    top: 0;
+    width: 10%;
+    z-index: 1000;
+    gap: 20px;
+}
+.navbar a {
+    color:rgba(255, 217, 0, 0.952);
+    text-decoration: underline;
+}
+.navbar a:visited {
+color: black;
+}
+.navbar a:hover {
+    color: lightgray;
+}
+.nav-link {
+    color: rgba(255, 217, 0, 0.952);
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+}
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: rgba(255, 217, 0, 0.952);
+    transition: width 0.3s ease;
+}
+.nav-link:hover:: {
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 90px;
+    }
 }
