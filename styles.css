@@ -11,19 +11,7 @@ body {
     margin: 0;
     padding-top: 10px;
 }
-.wrapper {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-}
-header {
-    padding: 20px;
-}
-.main_page {
-    text-align: center; 
-    
-}
-.main_page::before {
+body::before {
     content: "";
     position: fixed;
     top: 0;
@@ -36,6 +24,28 @@ header {
     opacity: 0.2;
     z-index: -1;
 }
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.main_page {
+    text-align: center; 
+    
+}
+
 .container {
     width: 90%;
     max-width: 1100px;
@@ -78,21 +88,7 @@ header {
     text-decoration: underline;
     border-radius: 5px;  
 }
-.bio_page::before {
-    min-height: 100vh;
-    max-width: 100vw;
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(img/NBMBC.jpg);
-    background-repeat: repeat;
-    background-size: 100px;
-    opacity: 0.2;
-    z-index: -1;
-}
+
 .bio_container {
     text-align: center;
     width: 60%;
@@ -120,59 +116,7 @@ header {
     line-height: 1.6;
     
 }
-.sermons_page::before {
-     content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(img/NBMBC.jpg);
-    background-repeat: repeat;
-    background-size: 100px;
-    opacity: 0.4;
-    z-index: -1;
-}
-.members_page::before {
-     content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(img/NBMBC.jpg);
-    background-repeat: repeat;
-    background-size: 100px;
-    opacity: 0.2;
-    z-index: -1;
-}
-.prayers_page::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(img/NBMBC.jpg);
-    background-repeat: repeat;
-    background-size: 100px;
-    opacity: 0.2;
-    z-index: -1;
-}
 
-.events_page::before {
-     content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(img/NBMBC.jpg);
-    background-repeat: repeat;
-    background-size: 100px;
-    opacity: 0.2;
-    z-index: -1;
-}
 .events  {
     list-style: none;
     font-size: 30px;
@@ -232,16 +176,19 @@ li {
 }
 .navbar {
     display: flex;
-    position: static;
-    margin-left: 1350px;
+    flex-wrap: wrap;
     font-size: 25px;
     font-weight: bold;
-    justify-content: space-between;
+    justify-content: center;
     align-items: right;
     flex-direction: row;
-    padding-bottom: 25px;
-    width: 10%;
-    z-index: 1000;
+    padding-bottom: 10px 20px;
+    box-sizing: border-box;
+    gap: 15px;
+}
+.navbar ul {
+    display: flex;
+    justify-content: flex-end;
     gap: 20px;
 }
 .navbar a {
@@ -272,12 +219,22 @@ color: black;
 }
 
 @media (max-width: 768px) {
+    .headline {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
     .hero {
         margin-top: 90px;
     }
     .navbar {
         font-size: 15px;
         margin-left: 100px;
+        justify-content: center;
+    }
+    .navbar a {
+        display: block;
+        margin: 5px 0;
     }
     .grid {
         align-items: center;
