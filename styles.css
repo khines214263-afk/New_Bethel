@@ -27,6 +27,7 @@ body::before {
 .wrapper {
     display: flex;
     justify-content: center;
+    
 }
 header {
     width: 100%;
@@ -122,6 +123,13 @@ main {
     font-size: 30px;
     text-align: center;
 }
+.event_title {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    text-align: center;
+    
+}
 li {
     margin-bottom: 45px;
     
@@ -159,7 +167,6 @@ li {
     width: 150px;
     margin: auto;
 }
-
 .card {
     background: none;
     width: 250px;
@@ -167,12 +174,23 @@ li {
     border-radius: 8px;
     text-align: center;
 }
-.card img {
-    width: 120px;
-    margin-bottom: 10px;
-}
-.card p {
+
+.card h2 {
     font-weight: bold;
+    margin-top: 50px;
+}
+.events_card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    border-radius: 8px;
+}
+.events_card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    
 }
 .navbar {
     display: flex;
@@ -240,5 +258,14 @@ color: black;
         align-items: center;
         justify-items: stretch;
         grid-template-columns: repeat(2, 1fr);
+    }
+    .events_card {
+        align-items: center;
+        justify-items: stretch;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .events_card img {
+        width: 150px;
+        height: 150px;
     }
 }
