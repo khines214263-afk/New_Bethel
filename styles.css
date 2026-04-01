@@ -192,6 +192,19 @@ li {
     display: block;
     
 }
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 200px;
+}
+
+
 .navbar {
     display: flex;
     flex-wrap: wrap;
@@ -267,5 +280,8 @@ color: black;
     .events_card img {
         width: 150px;
         height: 150px;
+    }
+    .video-item iframe {
+        height: 315px; /* standard YouTube player height */
     }
 }
