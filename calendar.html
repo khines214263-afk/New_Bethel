@@ -3,15 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
-        <title>New Bethel Baptist Church</title>
+        <title>Calendar</title>
         <link rel="stylesheet"href="styles.css">
     </head>
     <body>
         <header>
+         
         <nav class="navbar">
+       
+
     <div class="menu-toggle" id="menu-toggle">
       ☰
     </div>
+
     <div class="nav-links" id="nav-links">
             <a href="index.html">Home</a>
             <a href="calendar.html">Calendar</a>
@@ -22,21 +26,18 @@
             <a href="bio.html">Pastor Roach</a>
     </div>
         </nav>
-  <div class="overlay" id="overlay"></div>
-        </header>
-        <h1 class="headline">New Bethel Baptist Church</h1>
-        <main>
-        <div class="container">
-        <div class="hero">
-            
-           <img src="img/image1.jpeg" alt="Kevin Roach" class="pastor">
-           <h2>Pastor Kevin Roach</h1>
-           <p>New Bethel Missionary Baptist Church</p>
-           <p>281 Georgia Ave, Summerville, Ga. 30161</p> 
-           <a href="bio.html"> Read Bio</a>
-           </div>
-        </main>
-        <script>
+        <div class="overlay" id="overlay"></div>
+</header>
+<main>
+        <h1 class="headline">Calendar</h1>
+        
+        
+            <ol class="events">
+                <li>May 1st 2026 - Home Coming</li>
+                <li>July 18th 2026 - Pastor Roach's Birthday</li>
+            </ol>
+            </main>
+            <script>
   const toggle = document.getElementById("menu-toggle");
   const navLinks = document.getElementById("nav-links");
   const overlay = document.getElementById("overlay");
@@ -51,5 +52,5 @@
     overlay.classList.remove("active");
   });
 </script>
-    </body>
+        </body>
 </html>

@@ -9,11 +9,23 @@
     <body>
         <header>
            <nav class="navbar">
-             <a href="index.html">Home</a>
-            <a href="events.html">Events</a>
+             
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="calendar.html">Calendar</a>
             <a href="prayers_for.html">Prayers</a>
+            <a href="sermons.html">Sermons</a>
             <a href="glory_members.html">Glory</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="bio.html">Pastor Roach</a>
+    </div>
         </nav>
+        <div class="overlay" id="overlay"></div>
         </header>
         <h1 class="headline">Sermon Archive</h1>
         <main>
@@ -86,5 +98,20 @@
                 </div>
             </div>
         </main>
+        <script>
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+  const overlay = document.getElementById("overlay");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+</script>
         </body>
         </html>

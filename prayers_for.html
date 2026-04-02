@@ -3,49 +3,74 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
-        <title>Prayers For</title>
+        <title>Glory</title>
         <link rel="stylesheet"href="styles.css">
     </head>
     <body>
         <header>
+         
         <nav class="navbar">
-             <a href="index.html">Home</a>
-            <a href="events.html">Events</a> 
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <div class="nav-links" id="nav-links">
+           <a href="index.html">Home</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="prayers_for.html">Prayers</a>
             <a href="sermons.html">Sermons</a>
             <a href="glory_members.html">Glory</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="bio.html">Pastor Roach</a>
+    </div>
         </nav>
-         </header>
-         <h1 class="headline">Praying For You</h1>
-         <main>
-        <div class="wrapper">
-            <div class="grid">
-                <div class="card">
-                    <h2> Linda Mouzon</h2>
-                <img src="img/linda_mouzon.JPG" alt="Linda Mouzon"/>
-                <p>Linda is currently in Evergreen Nursing Home in Rome Ga. with the diagnosis of dementia. 
-                    She is happy most days and free of and major pain. Even though she doesn't remember a lot she knows there 
-                    is a God and that Jesus is King of kings. Prayers please for my mother she is still the same loving person
-                    that she has always been.  </p>
-                </div>
-           
-                <div class="card">
-                    <h2>Bobby Ray</h2>
-                    <img src="img/man-with-hat.jpg" alt="Bobby Ray"/>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            
-                <div class="card">
-                        <h2>Jane Doe</h2>
-                        <img src="img/black woman.jpg"/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="overlay" id="overlay"></div>
+</header>
+<main>
+        <h1 class="headline">Event Pictures</h1>
+          <h2 class="event_title">Linda Mouzon</h2>
+         <div class="wrapper">
+            <div class="grid">  
+                <div class="events_card">
+                    
+                    <img src="img/linda_mouzon.JPG" alt="Linda Mouzon"/>
                 </div>
             </div>
-        </main>
+         </div>
+                <h2 class="event_title">Clegry Lunch</h2>
+                <div class="wrapper">
+                <div class="grid">
+                    <div class="events_card">
+                <img src="img/man-with-hat.jpg" alt="man"/>
+                
+            </div>
+            </div>
+         </div>
+          <h2 class="event_title">Jane Doe</h2>
+                <div class="wrapper">
+                <div class="grid">
+                    <div class="events_card">
+                <img src="img/black woman.jpg" alt="woman"/>
+                
+            </div>
+            </div>
+         </div>
+</main>
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+  const overlay = document.getElementById("overlay");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+</script>
     </body>
-    </html>
+</html>

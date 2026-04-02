@@ -3,37 +3,33 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
-        <title>Events</title>
+        <title>Clergy</title>
         <link rel="stylesheet"href="styles.css">
     </head>
     <body>
         <header>
          
         <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="events.html">Events</a>
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <div class="nav-links" id="nav-links">
+           <a href="index.html">Home</a>
+            <a href="calendar.html">Calendar</a>
             <a href="prayers_for.html">Prayers</a>
             <a href="sermons.html">Sermons</a>
             <a href="glory_members.html">Glory</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="bio.html">Pastor Roach</a>
+    </div>
         </nav>
+        <div class="overlay" id="overlay"></div>
 </header>
 <main>
         <h1 class="headline">Event Pictures</h1>
-          <h2 class="event_title">Baptisms</h2>
-         <div class="wrapper">
-            <div class="grid">  
-                <div class="events_card">
-                    
-                    <img src="img/image1 baptism.jpeg" alt="baptism"/>
-                    <img src="img/image0 (2)baptism.jpeg" alt="baptism"/>
-                    <img src="img/image0baptism.jpeg" alt="baptism"/>
-                    <img src="img/image2 baptism.jpeg" alt="baptism"/>
-                    <img src="img/image3baptism.jpeg" alt="baptism"/>
-                    <img src="img/image4baptism.jpeg" alt="baptism"/>
-                    <img src="img/image5baptism.jpeg" alt="baptism"/>
-                </div>
-            </div>
-         </div>
+         
                 <h2 class="event_title">Clegry Lunch</h2>
                 <div class="wrapper">
                 <div class="grid">
@@ -53,6 +49,21 @@
             </div>
          </div>
 </main>
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+  const overlay = document.getElementById("overlay");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+</script>
     </body>
 </html>
-                    
+          
