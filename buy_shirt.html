@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <title>Purchase</title>
+        <link rel="stylesheet"href="styles.css">
+    </head>
+    <body>
+        <header>
+         
+        <nav class="navbar">
+       
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="prayers_for.html">Prayers</a>
+            <a href="sermons.html">Sermons</a>
+            <a href="glory_members.html">Glory</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="bio.html">Pastor Roach</a>
+            <a href="buy_shirt.html">Shirt Sale</a>
+    </div>
+        </nav>
+        <div class="overlay" id="overlay"></div>
+</header>
+<main>
+        <h1 class="headline">Purchase Shirt</h1>
+        
+        <section class="order">
+            
+            <form action="https://formspree.io/f/xgoprwjo" method="post">
+                <label>Name</label>
+                <input type="text" name="name" required>
+                <label>Preferred Method of Contact</label>
+                <select>
+                    <option></option>
+                    <option>Phone Call</option>
+                    <option>Text</option>
+                    <option>Email</option>
+                </select>
+                <label>Contact Info Phone Number</label>
+                <input type="tel" name="phone">
+                <label>Contact Info Email</label>
+                <input type="email" name="email">
+                <label>When Do You Want Your Shirt</label>
+                <input type="date" name="delivery_date" requied>
+                <label>Size Needed</label>
+                <select name="sizes">
+                    <option></option>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                    <option>X-Large</option>
+                    <option>XX-Large</option>
+                    <option>XXX-Large</option>
+                    
+                </select>
+                <label>Youth Sizes Are Availible Upon Request</label>
+                <textarea name="message" id="message"></textarea>
+                
+                <label>Quanity Needed?</label>
+                <select name="Amount">
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+             
+                <label for="message">For All Other Questions</label>
+                <textarea name="message" id="message"></textarea>
+                <button type="submit">Submit Order</button>
+                 </form>
+        </section>
+        </main>
+         <script>
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+  const overlay = document.getElementById("overlay");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+</script>
+    </body>
+    </html>

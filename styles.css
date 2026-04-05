@@ -36,7 +36,7 @@ body::before {
     text-align: justify;
     justify-self: center;
 }
-header {
+.header {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -81,7 +81,9 @@ main {
 .hero p {
     display: block;
     text-align: center;
-    
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
 }
     .bio-btn {
     display: inline-block;
@@ -143,11 +145,13 @@ li {
     z-index: -1;
 }
 .headline {
-    font-size: 50px;
+    font-size: 80px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     margin-bottom: 30px;
+    padding-bottom: 50px;
     text-align: center;
+    text-decoration: underline;
 }
 .grid {
     display: grid;
@@ -176,12 +180,24 @@ li {
 }
 .events_card {
     display: grid;
-    grid-template-columns: repeat(4, 250px);
     gap: 15px;
     border-radius: 8px;
     justify-items: center;
 }
 .events_card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+.gallery_card {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    gap: 15px;
+    border-radius: 8px;
+    justify-items: center;
+}
+.gallery_card img {
     width: 250px;
     height: 250px;
     object-fit: cover;
@@ -213,6 +229,26 @@ li {
 .video-item iframe {
     width: 100%;
     height: 200px;
+}
+.order {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+input, select, textarea { 
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+button {
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 .navbar {
     display: flex;
@@ -280,19 +316,27 @@ li {
     .nav-links.active {
         right: 0;
     }
-    .grid {
-        align-items: center;
-        justify-items: center;
-        grid-template-columns: repeat(2, 1fr);
-    }
     .events_card {
         align-items: center;
         justify-items: center;
-        grid-template-columns: repeat(2, 1fr);
+       
     }
     .events_card img {
+        display: flex;
+        align-items: center;
         width: 180px;
-        height: 200px;
+        height: 250px;
+    }
+    .gallery_card {
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery_card img {
+        display: flex;
+        align-items: center;
+        width: 180px;
+        height: 250px;
     }
     .video-item iframe {
         height: 315px; /* standard YouTube player height */
