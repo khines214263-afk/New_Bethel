@@ -248,7 +248,7 @@ button {
     padding: 12px;
     background: black;
     color: white;
-    border: none;
+    border: black;
     cursor: pointer;
 }
 .navbar {
